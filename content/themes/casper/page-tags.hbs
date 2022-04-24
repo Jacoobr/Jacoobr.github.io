@@ -1,0 +1,40 @@
+{{!< default}}
+{{#post}}
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <div class="o-tag-grid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="o-tags-title">
+                        <h2>{{title}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+        <div class="o-tag-grid">
+            <div class="row">
+                {{#foreach tags}}
+                <div class="col-2">
+                    <div class="o-tag-card">
+                        <a href="{{url}}"
+                            style="background-image: url({{feature_image}})">
+                            <h2 class="o-tag-card-title">
+                                <span class="o-tag-card-title-name">
+                                    {{ name }}
+                                    <span class="o-tag-font-size-tiny">
+                                        ({{ count.posts }})
+                                    </span>
+                                </span>
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                {{/foreach}}
+            </div>
+        </div>
+        {{/get}}
+    </div>
+</main>
+{{/post}}
+

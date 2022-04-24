@@ -29,9 +29,6 @@
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
                 <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
-                <!-- <span id="busuanzi_container_site_uv">Visitors &nbsp;<span id="busuanzi_value_site_uv"></span></span> -->
-                <span>陕公网安备 61012402000202</span>
-                <span>陕ICP备19010826号</span>
                 <nav class="site-footer-nav">
                     <a href="{{@site.url}}">Latest Posts</a>
                     {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
